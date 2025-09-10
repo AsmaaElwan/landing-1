@@ -1,0 +1,709 @@
+*{
+margin: 0;
+padding: 0;
+}
+/*--------------------------------------------------------------
+# Font & Color Variables
+--------------------------------------------------------------*/
+@font-face {
+  font-family:DiodrumArabic-Bold;
+  src: url(../fonts/DiodrumArabic-Bold-1.ttf);
+}
+
+@font-face {
+  font-family:DiodrumArabic-Light;
+  src: url(../fonts/DiodrumArabic-Light.ttf);
+}
+
+@font-face {
+  font-family: DiodrumArabic-Regular;
+  src: url(../fonts/DiodrumArabic-Regular-1.tt);
+}
+
+
+@font-face {
+  font-family: BergenSans-Regular;
+  src: url(../fonts/BergenSans-Regular.otf);
+}
+@font-face {
+  font-family: DiodrumArabic-Semibold;
+  src: url(../fonts/DiodrumArabic-Semibold-1.ttf);
+}
+
+
+
+
+/* Fonts */
+:root {
+  /* family */
+  --default-font:"BergenSans-Regular" ;
+  --heading-font: "BergenSans-Bold",  sans-serif;
+  --nav-font: "BergenSans-SemiBold",  sans-serif;
+
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root { 
+--background-color: #ffffff;
+--default-color: #04af52;
+--heading-color: #26a8d9;
+--contrast-color: #c3c3c3;
+}
+
+/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+
+
+.light-background {
+  --background-color:#ffffff;
+}
+:root{
+  --text-on-hero:#ffffff;
+  --container-max:1440px;
+
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# Top-Banner
+--------------------------------------------------------------*/
+
+.top-banner {
+    font-family: "DiodrumArabic-SemiBold", sans-serif;
+background-color: #f38490;
+
+}
+
+/*********************************** */
+/* HERo-SECTION*/
+/************************************* */
+
+
+.logo{
+  position: relative;
+  right: 5%;
+  width: 25%;
+}
+.logo img{
+  width:100%
+}
+.hero {
+  position: relative;
+}
+
+.hero-data {
+  position: absolute;
+  top: 50%;
+  right: 5%;        /* الآن سيتحرك تمامًا لليمين */
+  transform: translateY(-50%);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  max-width: 90%;
+  text-align: right;  /* نص محاذي لليمين */
+}
+
+
+.hero-data .content h1{
+    color: #f38490;
+  font-family: "DiodrumArabic-SemiBold", sans-serif;
+  font-weight: 400;
+  text-align: right;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  margin-right: 12%;
+  font-size: 3rem;
+
+  
+}
+/* الأساس: الموبايل */
+.content h1 {
+  font-size: 1.3rem !important; /* أصغر حجم */
+}
+
+/* التابلت */
+@media (min-width: 768px) {
+  .content h1 {
+    font-size: 2rem !important;
+  }
+}
+
+/* الديسكتوب */
+@media (min-width: 1200px) {
+  .content h1 {
+    font-size: 3rem !important;
+  }
+}
+
+
+.hero-data .content p {
+
+  color: #26a8d9;
+  font-family: "DiodrumArabic-SemiBold", sans-serif;
+  font-weight: 400;
+  text-align: right;
+  line-height: 1.8;
+  margin-right: 12%;
+    font-size: 1.2rem;
+
+}
+
+
+
+.hero::before {
+  content: "";
+  position: absolute;
+  left: 16.5%;                  /* من الناحية الشمال */
+  top: 0;                   /* عند بداية الهيرو */
+  width: 13.3125rem;
+  height: 0.625rem;
+  background-color: #26a8d9;
+  transform: translateY(-50%); /* يخلي نصفه فوق ونصفه داخل الصورة */
+  z-index: 5;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  right: 12%;               /* من الناحية الشمال */
+  bottom: -10px;                   /* عند بداية الهيرو */
+  width: 13.3125rem;
+  height: 0.625rem;
+  background-color:#f38490;
+  transform: translateY(-50%); /* يخلي نصفه فوق ونصفه داخل الصورة */
+  z-index: 5;
+}
+
+
+
+
+
+
+/*********************************** */
+/* Booking-SECTION*/
+/************************************* */
+
+
+
+
+
+
+
+.Booking_Details {
+  padding: 5rem 0;
+}
+
+.Booking_Details h2 {
+  color: #F38490;
+  text-align: center;
+  font-family: "DiodrumArabic-Bold", sans-serif;
+  font-size: 2.25rem; /* للشاشات الكبيرة */
+  font-weight: 400;
+  position: relative;
+  height: 4.0625rem;
+  margin-bottom: 0;
+}
+
+.form-box {
+  text-align: center;
+  font-family: "DiodrumArabic-Bold", sans-serif;
+  font-size: 2.25rem; /* للشاشات الكبيرة */
+  font-weight: 400;
+  position: relative;
+  height: 4.0625rem;
+}
+
+/* أول جزء من النص */
+.form-box .colored-text::before {
+  content: " احجزي موعدك الآن ";
+  color: var(--heading-color);
+  text-align: center;
+  font-family: "DiodrumArabic-Bold", sans-serif;
+  font-size: 2rem; /* للشاشات الكبيرة */
+  font-weight: 400;
+  position: relative;
+  height: 4.0625rem;
+}
+
+/* الجزء الثاني */
+.form-box .colored-text {
+  color: #c3c3c3;
+  text-align: center;
+  font-family: "DiodrumArabic-Bold", sans-serif;
+  font-size: 2rem; /* للشاشات الكبيرة */
+  font-weight: 400;
+  position: relative;
+  height: 4.0625rem;
+}
+
+/* Media Queries لتصغير الخط على الشاشات الأصغر */
+
+/* للأجهزة المتوسطة (تابلت) */
+@media (max-width: 992px) {
+  .Booking_Details h2 {
+    font-size: 1.75rem;
+    height: auto;
+  }
+  .form-box {
+    font-size: 1.5rem;
+    height: auto;
+  }
+  .form-box .colored-text::before {
+    font-size: 1.5rem;
+    height: auto;
+  }
+  .form-box .colored-text {
+    font-size: 1.5rem;
+    height: auto;
+  }
+}
+
+/* للموبايلات الصغيرة */
+@media (max-width: 576px) {
+  .Booking_Details h2 {
+    font-size: 1.25rem;
+    height: auto;
+  }
+  .form-box {
+    font-size: 1.2rem;
+    height: auto;
+  }
+  .form-box .colored-text::before {
+    font-size: 1.2rem;
+    height: auto;
+  }
+  .form-box .colored-text {
+    font-size: 1.2rem;
+    height: auto;
+  }
+}
+
+/*FIXME - Form ----*/
+.booking-box {
+  background: #ffffff;
+  border-radius: 1.3125rem;
+  border-width: 0.1875rem;
+  border-style: solid;
+  border-image: linear-gradient(
+    82.15deg,
+    rgba(0, 164, 244, 1) 0%,
+    rgba(153, 219, 251, 1) 100%
+  );
+  border-image-slice: 1;
+
+  width: 66.4375rem;
+  max-width: 95%;
+  height: auto;
+  margin: 3rem auto;
+  box-shadow: -0.9375rem 0.9375rem 1.25rem 0.3125rem rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  padding: 3rem 2rem!important;
+}
+
+.booking-text {
+  color: #00a4f4;
+  text-align: center;
+  font-family: "DiodrumArabic-Bold", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 48.625rem;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* الحقول مع الأيقونات على اليسار */
+.booking-form input,
+.booking-form select {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem; /* مسافة للأيقونة على اليسار */
+  border-radius: 14px;
+  border: 1px solid #e5e5e5;
+  background: #fafafa;
+  font-size: 1rem;
+  color: #333;
+  box-shadow: 6px 6px 12px #e6e6e6,
+              -6px -6px 12px #ffffff;
+  transition: 0.3s;
+  box-sizing: border-box;
+  text-align: right; /* placeholder والنص من اليمين */
+  direction: rtl;
+}
+
+/* أيقونات على اليسار */
+.input-wrapper i {
+  position: absolute;
+  left: 1rem; /* على اليسار */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #bbb;
+  font-size: 1.1rem;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+/* عند التركيز */
+.booking-form input:focus,
+.booking-form select:focus {
+  border: 1px solid #00a4f4;
+  box-shadow: inset 4px 4px 8px #e0e0e0,
+              inset -4px -4px 8px #ffffff;
+  background: #fff;
+  outline: none;
+}
+
+.input-wrapper input:focus ~ i,
+.input-wrapper select:focus ~ i {
+  color: #00a4f4;
+  transform: translateY(-50%) scale(1.1);
+}
+
+
+/* السهم داخل حقل الـ select */
+.input-wrapper .select-arrow {
+  position: absolute;
+  right: 1rem; /* السهم على اليمين */
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #00a4f4;
+  font-size: 1rem;
+}
+
+/* تغيير لون الخيارات للون الأخضر */
+.input-wrapper select option {
+  color: #00a4f4;
+  background-color: #fff;
+  text-align: right; /* لجعل النص من اليمين */
+}
+
+
+/* زر الحجز */
+.custom-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(
+    161.87deg,
+    rgba(245, 134, 148, 1) 0%,
+    rgba(143, 78, 86, 1) 100%
+  );
+  border-radius: 0.75rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  margin: 1rem 0 0 0;
+  width: 100%;
+  max-width: 20rem;
+  margin: auto;
+}
+
+/* Media Queries للشاشات الأصغر */
+@media (max-width: 992px) {
+  .booking-box {
+    padding: 1.5rem;
+  }
+
+  .booking-text {
+    font-size: 1.3rem;
+  }
+
+  .booking-form input,
+  .booking-form select {
+    font-size: 0.95rem;
+    padding: 0.8rem 0.8rem 0.8rem 2.5rem; /* أيقونات على اليسار */
+  }
+
+  .custom-btn {
+    font-size: 1rem;
+    padding: 0.9rem 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .booking-box {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .booking-text {
+    font-size: 1.1rem;
+  }
+
+  .booking-form input,
+  .booking-form select {
+    font-size: 0.9rem;
+    padding: 0.7rem 0.7rem 0.7rem 2.2rem; /* أيقونات على اليسار */
+  }
+
+  .custom-btn {
+    font-size: 0.95rem;
+    padding: 0.8rem 1rem;
+  }
+}
+
+
+/* أيقونات الحقول */
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem; /* مسافة بين الحقول */
+}
+
+.booking-form select {
+  width: 100%;
+  padding: 1rem 3rem 1rem 1rem; /* السهم على اليمين */
+  border-radius: 14px;
+  border: 1px solid #e5e5e5;
+  background: #fafafa;
+  font-size: 1rem;
+  color: #333;
+  text-align: right;
+  direction: rtl;
+  box-sizing: border-box;
+}
+
+.input-wrapper .select-arrow {
+  position: absolute;
+  right: 1rem; /* السهم داخل الحقل */
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #00a4f4;
+  font-size: 1.2rem;
+}
+
+
+.btn-book{
+  color: #ffffff!important;
+  margin:2rem 0!important;
+  padding: 20px 30px;
+}
+
+
+
+
+/*********************************** */
+/* .why-choose-SECTIOn               */
+/********************************** */
+
+.total-card{
+  display: flex;
+  justify-content: space-between!important;
+  align-items: center;
+  max-width: 80%;
+  margin: auto!important;
+}
+.why-choose .icon {
+  border-radius: 0.666875rem;
+  border: 3px solid #00a4f4;
+  width: 6.5rem;
+  height: 6.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.why-choose .photo {
+  border: none !important;
+}
+
+.why-choose .text-box h3 {
+  color: #F38490;
+  font-family: "DiodrumArabic-Bold", sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+  text-align: right;
+}
+
+.why-choose .text-box p {
+  color: #00a4f4;
+  font-family: "DiodrumArabic-Bold", sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  text-align: right;
+}
+
+/* للموبايل */
+@media (max-width: 576px) {
+  .why-choose .icon {
+    width: 5rem;
+    height: 5rem;
+  }
+  .why-choose .text-box h3 { font-size: 1.2rem; }
+  .why-choose .text-box p { font-size: 0.9rem; }
+}
+
+
+
+.responsive-title {
+  font-family: "DiodrumArabic-Bold", sans-serif;
+  font-size: clamp(1.2rem, 2vw + 0.5rem, 2.25rem); 
+  /* ⬅️ يتغير حسب حجم الشاشة */
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+
+
+
+
+
+
+
+/*********************************** */
+/* SERVICES-SECTION                  */
+/********************************** */
+.services{
+  max-width: 80%;
+  margin: auto;
+}
+.services h2 {
+  font-family: "DiodrumArabic-Bold", sans-serif;
+  font-size: 2rem;
+  color: #00a4f4;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 1.3rem;
+  border: 0.11px solid transparent;
+  background: linear-gradient(#fff, #fff) padding-box,
+              linear-gradient(82.15deg, rgba(0,164,244,1) 0%, rgba(153,219,251,1) 100%) border-box;
+  box-shadow: -15px 15px 20px 5px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: all 0.3s ease-in-out;
+  direction: rtl;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h3 {
+  color: #f58694;
+  font-family: "DiodrumArabic-Bold", sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+}
+
+.service-card p {
+  color: #00a4f4;
+  font-family: "DiodrumArabic-Semibold", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  min-height: 80px; /* علشان النصوص تتساوى */
+}
+
+.service-card .btn {
+  border-radius: 50px;
+  background: #f58694;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 8px 30px;
+  border: none;
+  transition: 0.3s;
+}
+
+
+
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* يخلي الزر تحت */
+}
+
+.service-type {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* يوزع النص والزر */
+}
+
+.service-card p {
+  flex-grow: 1; /* يخلي النص ياخد أي فراغ فاضي */
+}
+
+
+
+
+
+
+
+
+/* الكارت نفسه */
+.service-card:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(#fff, #fff) padding-box,
+              linear-gradient(82.15deg, rgb(11, 14, 15) 0%, rgba(153,219,251,1) 100%) border-box;
+}
+
+/* الزرار */
+.service-card .btn:hover {
+  color: #fff;                /* نفس لون النص */
+  background: #f58694;        /* نفس الخلفية */
+}
+
+
+
+
+
+
+/*********************************** */
+/* FooTER*/
+/************************************* */
+ footer{
+    background-color: #26a8d9!important;
+
+ }
+
+ .d-flex .btn-outline-light:hover {
+    background-color: transparent !important;
+    color: white !important;
+    border-color: white !important;
+    box-shadow: none !important;
+}
+
+
+footer p,
+footer a,
+footer span {
+  font-family: "DiodrumArabic-Semibold", sans-serif;
+  font-size: 1.4rem;
+  padding: 2px 10px;
+}
+
+footer .highlight-text {
+  font-size: 3rem!important; /* حجم أكبر */
+  font-weight: 700!important; /* غامق */
+  font-family: "DiodrumArabic-Semibold", sans-serif;
+}
+
